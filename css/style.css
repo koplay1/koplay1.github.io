@@ -292,3 +292,17 @@ body{
 	right: 100px;
 	top: 900px;
 }
+@keyframes finishA {
+            0%{
+                transform: scale(1);
+            }
+
+            100%{
+                transform: scale(10);
+            }
+        }
+#finish{
+	animation: finishA 0.7s infinite linear;
+	opacity:0.5;
+	display: none;
+}

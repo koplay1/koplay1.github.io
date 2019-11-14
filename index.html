@@ -10,51 +10,14 @@
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
-	<div class="main">
-		<div class="content">
-			<div class="welcome">歡迎來到國泰產險！</div>
-			<div class="title p-100">請輸入手機號碼，如果獲得電子禮券將透過其發送</div>
-			<div class="p-100"><img id="tel" class="mimg" src="img/tel.png"><input type="text" id="phone" name="phone" style="height: 220px; width: 1200px; font-size: 150pt ; padding: 0 ;margin:0; border: 0; outline: none;">
-				<!-- 無遮罩號碼--><input type="text" name="rphone" id="rphone" style="font-size: 100pt; display:none ;" >
-			</div>
-			<div class="p-50">
-				<div id="number" style="margin: 0 auto;">
-					<img class="mimg" src="img/1.png" data-num="1">
-					<img class="mimg" src="img/2.png" data-num="2">
-					<img class="mimg" src="img/3.png" data-num="3">
-					<img class="mimg" src="img/4.png" data-num="4">
-					<img class="mimg" src="img/5.png" data-num="5">
-					<img class="mimg" src="img/6.png" data-num="6">
-					<img class="mimg" src="img/7.png" data-num="7">
-					<img class="mimg" src="img/8.png" data-num="8">
-					<img class="mimg" src="img/9.png" data-num="9">
-					<img class="mimg" src="img/star.png" data-num="*">
-					<img class="mimg" src="img/0.png" data-num="0">
-					<img class="mimg" src="img/sharp.png" data-num="#">
-				</div>
-			</div>
-		</div>
+	<div class="main" style=" background-image: url(img/indexbg.png);">
 	</div>
 </body>
 </html>
 <script>
 	$(function(){
-		$("#tel").click(function(){
-			location.href="step2.html";
-		});
-		$("#number img").click(function(){
-			$("#phone").val($("#phone").val()+$(this).data("num"));
-			$("#rphone").val($("#rphone").val()+$(this).data("num"));
-			if($("#phone").val().length==9)
-				{  
-					$("#phone").val($("#rphone").val().substr(0,7)+"*"+$(this).data("num"));
-				} 
-			if($("#phone").val().length==10)
-				{  
-					$("#phone").val($("#rphone").val().substr(0,7)+"**"+$(this).data("num"));
-					setTimeout(function(){ $("#phone").val($("#phone").val().substr(0,9)+"*") } ,1000)  
-				} 
-
-		});
+		$("body").click(function(){
+			location.href="step1.html";
+		})
 	});
 </script>

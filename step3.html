@@ -26,6 +26,7 @@
 			</div>
 		</div>
 	</div>
+	<div id="finish" style="width: 100px ; height: 100px; position: absolute; top:850px;left: 2000px; background-color: #d20f78 ; border-radius: 50%; "></div>
 </body>
 </html>
 <script>
@@ -64,10 +65,25 @@
     	if (found) type = found[1];
 		var _random = Math.floor(Math.random()*50) ;
 		var _m = 500*_random+5000;
-		$("#money").val(number_format(_m));
+		var i =0;
+		var s= setInterval(function(){
+			i += 10;
+		    if(i>=_m){
+		    	//$("#finish").show().fadeOut(600);
+		        clearInterval(s);
+		        setTimeout(function(){ location.href="step4.html?money="+_m+"&type="+type } ,3000);
+		    }
+		    $("#money").val(number_format(i));
+		},1);
+		//$("#money").val(number_format(_m));
 		document.cookie="money="+_m;
-		setTimeout(function(){ location.href="step4.html?money="+_m+"&type="+type } ,2000);
+		
+		
 	}
+
+	function fun(){
+
+	}	
 
 	function number_format(n) {
     n += "";

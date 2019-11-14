@@ -23,21 +23,13 @@
 </html>
 <script>
 	$(function(){
+		money=0;
+		type="";
 		found = location.search.match(/[?&]money=(\w*)/);
     	if (found) money = found[1];
 		found = location.search.match(/[?&]type=(\S*)/);
     	if (found) type = found[1];
-		$('body').on('touchstart', function(e){
-			e.preventDefault();
-		}).on('touchend', function(e){
-			e.preventDefault();
-			location.href="step7.html?money="+money+"&type="+type ;
-		}).on('mousedown', function(e){
-			e.preventDefault();
-		}).on('mouseup', function(e){
-			e.preventDefault();
-			location.href="step7.html?money="+money+"&type="+type ;
-		});
+		setTimeout(function(){location.href="step7.html?money="+money+"&type="+type ;},5000);
 
 	});
 
