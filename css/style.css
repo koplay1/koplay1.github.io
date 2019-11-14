@@ -1,0 +1,294 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Microsoft JhengHei;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+	overflow: hidden;
+}
+.main{
+	width: 3580px;
+	height: 2040px;
+	background-image: url('../img/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.content{
+	width: 100%;
+	height: 1910px;
+	position: absolute;
+	top: 65px;
+}
+.welcome{
+	font-size: 100pt;
+	text-align: center;
+	padding-top: 200px;
+	letter-spacing: 13px;　
+}
+.title{
+	color: #d20f78;
+	font-size: 60pt;
+	text-align: center;
+	letter-spacing: 13px;　	
+	padding-top: 200px;
+}
+.s6title{
+	color: #fff;
+	font-size: 60pt;
+	text-align: center;
+	letter-spacing: 13px;　	
+	padding-top: 200px;
+}
+.p-100{	
+	text-align: center;
+	padding-top: 100px;
+}
+.p-50{	
+	text-align: center;
+	padding-top: 50px;
+}
+.p-400{	
+	text-align: center;
+	padding-top: 400px;
+}
+.p-300{	
+	text-align: center;
+	padding-top: 300px;
+}
+.p-650{	
+	text-align: center;
+	padding-top: 650px;
+}
+.p-200{	
+	text-align: center;
+	padding-top: 200px;
+}
+.mimg{
+	width: 200px;
+	vertical-align: bottom;
+	padding-right: 50px;
+}
+#number{
+	width: 800px;
+}
+#number img{ 
+	padding-top: 30px;
+}
+@keyframes rotateY {
+    100% { transform: rotateY(720deg); }
+}
+.rotate {
+    animation:rotateY 1s ease;
+    animation-iteration-count: 1, 1;
+}
+.scaleDraw1 {
+    transform: rotateY(720deg) scale(1.5);
+	transform-origin: center center;
+	animation-duration: 800ms;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	transition: all 1s 0.01s;
+	margin-left:630px;
+	margin-top: -200px;
+}
+.scaleDraw2 {
+    transform: rotateY(720deg) scale(1.5);
+	transform-origin: center center;
+	animation-duration: 800ms;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	transition: all 1s 0.01s;
+	margin-left:-480px;
+	margin-top: -200px;
+}
+.showInfo{
+	transform: rotate(-30deg) scale(0.6);
+	transform-origin: center center;
+	animation-duration: 800ms;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	transition: all 1s 0.01s;
+	position: fixed;
+	margin-left:-800px;
+	margin-top: -800px;
+}
+.showInfo2{
+	transform: rotate(-30deg) scale(0.6);
+	transform-origin: center center;
+	animation-duration: 800ms;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+	transition: all 1s 0.01s;
+	position: fixed;
+	margin-left:-1900px;
+	margin-top: -800px;
+}
+.border-ch{
+  transform: scale(0);
+  transform-origin: center center;
+  transition: all 0.5s;
+}
+.border-ch2{
+  transform: scale(1500);
+  
+  transition: all 0.5s;
+}
+.etitle{
+	font-size: 80pt;
+	background-color: #d20f78;
+	color: #fff;
+	padding: 30px;
+	margin-top: -200px;
+	display: inline-block;
+	position: absolute;
+}
+.einner{
+	font-size: 70pt;
+	max-width: 2000px;    
+	display: inline-block;
+	line-height: 100pt;
+}
+.einner2{
+	font-size: 70pt;
+	max-width: 2550px;    
+	display: inline-block;
+	line-height: 100pt;
+}
+#event1{
+	display: none;
+	position: absolute; 
+	top:480px; 
+	left: 1000px; 
+	border: 5px solid #d20f78; 
+	padding: 120px 120px 50px 120px;
+}
+#event2{
+	display: none;
+	position: absolute; 
+	top:1100px; 
+	left: 400px; 
+	border: 5px solid #d20f78; 
+	padding: 120px 120px 50px 120px;
+}
+#event1s{
+	display: inline-block;
+	border: 5px solid #d20f78; 
+	padding: 120px 120px 50px 120px;
+}
+#event2s{
+	display: inline-block;
+	border: 5px solid #d20f78; 
+	padding: 120px 120px 50px 120px;
+	margin-top: 150px;
+}
+#fly{
+	position: absolute; background-image: url('../img/fly.png'); background-repeat: no-repeat; background-size: 100% 100%; 
+	width: 1700px; 
+	height: 1900px; 
+	left: 900px; 
+	top:20px;
+	animation: fly 10s infinite linear;
+}
+@keyframes fly {
+	0% {
+	    transform: rotate(0deg);
+	}
+	100% {
+	    transform: rotate(-360deg);
+	}
+}
+.btnDowntxt{
+	display:inline-block; font-size: 30pt ;position: absolute; line-height: 40pt;
+}
+.eventT {
+	margin-top: 50px;
+	margin-bottom: 150px;
+	width: 2600px;
+}
+.eventT td{
+	font-size: 55pt;
+	border: 5px solid #d20f78;
+	padding: 30px;
+	line-height: 80pt;
+	padding: 20px;
+	padding-left: 100px;
+	vertical-align: middle;
+}
+.ptd{
+	padding: 100px 20px 20px 100px !important;
+}
+.redtext{
+	color:#d20f78; 
+}
+.s7etitle{
+	font-size: 70pt;
+	background-color: #d20f78;
+	color: #fff;
+	padding: 30px;
+	margin-top: -200px;
+	display: inline-block;
+	position: absolute;
+}
+.s7btn{
+	position: absolute;
+	top: 700px;
+	right: 50px;
+}
+#next{
+	width: 100px;
+	position: absolute;
+	right: 100px;
+	top: 900px;
+}
