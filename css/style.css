@@ -239,7 +239,7 @@ body{
 	height: 1900px; 
 	left: 900px; 
 	top:20px;
-	animation: fly 10s infinite linear;
+	animation: fly 1s infinite linear;
 }
 @keyframes fly {
 	0% {
