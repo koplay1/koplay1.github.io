@@ -31,32 +31,41 @@
 </html>
 <script>
 	$(function(){
+		$.extend($.support, { touch: "ontouchend" in document });
+		if($.support.touch){
+			$('#btn').on('touchstart', function(e){
+				e.preventDefault();
+				$("#btn").hide() ;
+				$("#btn_click").show() ;
+				//$("#btn").hide();
+			}).on('touchend', function(e){
+				e.preventDefault();
+				$("#btn").show() ;
+				$("#btn_click").hide() ;
+				getmoney()
+				//$("#btn").hide();
+			});
 
-		$('#btn').on('touchstart', function(e){
-			e.preventDefault();
-			$("#btn").hide() ;
-			$("#btn_click").show() ;
-			//$("#btn").hide();
-		}).on('touchend', function(e){
-			e.preventDefault();
-			$("#btn").show() ;
-			$("#btn_click").hide() ;
-			getmoney()
-			//$("#btn").hide();
-		});
 
-		$('#btn').on('mousedown', function(e){
-			e.preventDefault();
-			$("#btn").hide() ;
-			$("#btn_click").show() ;
-			//$("#btn").hide();
-		}).on('mouseup', function(e){
-			e.preventDefault();
-			$("#btn").show() ;
-			$("#btn_click").hide() ;
-			getmoney()
-			//$("#btn").hide();
-		});
+		}
+		else
+		{
+			$('#btn').on('mousedown', function(e){
+				e.preventDefault();
+				$("#btn").hide() ;
+				$("#btn_click").show() ;
+				//$("#btn").hide();
+			})
+			$('#btn_click').on('mouseup', function(e){
+				e.preventDefault();
+				$("#btn").show() ;
+				$("#btn_click").hide() ;
+				getmoney()
+				//$("#btn").hide();
+			});
+		}
+
+
 
 	});
 

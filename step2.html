@@ -47,110 +47,84 @@
 </html>
 <script>
 	$(function(){
+		$.extend($.support, { touch: "ontouchend" in document });
 
-		$('#btn_A').click(function(){
-			setTimeout(function(){			
-				location.href="step3.html?type=單身貴族"
-			},1500);
-		});
-		$('#btn_B').click(function(){
-			setTimeout(function(){			
-				location.href="step3.html?type=呼朋引伴"
-			},1500);
-		});
-		
-		$('#btn_C').click(function(){
-			setTimeout(function(){			
-				location.href="step3.html?type=親子樂活"
-			},1500);
-		});
+		if($.support.touch){
+			$('#btn_A').on('touchstart', function(e){
+				e.preventDefault();
+				$("#btn_A").hide() ;
+				$("#btn_A_click").show() ;
+				//$("#btn").hide();
+			}).on('touchend', function(e){
+				e.preventDefault();
+				setTimeout(function(){			
+					$("#btn_A").show() ;
+					$("#btn_A_click").hide() ;
+					location.href="step3.html?type=單身貴族"
+				},1500);
 
-		$('#btn_A').on('touchstart', function(e){
-			e.preventDefault();
-			$("#btn_A").hide() ;
-			$("#btn_A_click").show() ;
-			//$("#btn").hide();
-		}).on('touchend', function(e){
-			e.preventDefault();
-			setTimeout(function(){			
-				$("#btn_A").show() ;
-				$("#btn_A_click").hide() ;
-				location.href="step3.html?type=單身貴族"
-			},1500);
-
-		});
-
-		$('#btn_A').on('mousedown', function(e){
-			e.preventDefault();
-			$("#btn_A").hide() ;
-			$("#btn_A_click").show() ;
-			//$("#btn").hide();
-		}).on('mouseup', function(e){
-			e.preventDefault();
-			setTimeout(function(){			
-				$("#btn_A").show() ;
-				$("#btn_A_click").hide() ;
-				location.href="step3.html?type=單身貴族"
-			},1500);
-		});	
+			});
 
 
-		$('#btn_B').on('touchstart', function(e){
-			e.preventDefault();
-			$("#btn_B").hide() ;
-			$("#btn_B_click").show() ;
-			//$("#btn").hide();
-		}).on('touchend', function(e){
-			e.preventDefault();
-			setTimeout(function(){			
-				$("#btn_B").show() ;
-				$("#btn_B_click").hide() ;
-				location.href="step3.html?type=呼朋引伴"
-			},1500);
+			$('#btn_B').on('touchstart', function(e){
+				e.preventDefault();
+				$("#btn_B").hide() ;
+				$("#btn_B_click").show() ;
+				//$("#btn").hide();
+			}).on('touchend', function(e){
+				e.preventDefault();
+				setTimeout(function(){			
+					$("#btn_B").show() ;
+					$("#btn_B_click").hide() ;
+					location.href="step3.html?type=呼朋引伴"
+				},1500);
 
-		});
+			});
 
-		$('#btn_B').on('mousedown', function(e){
-			e.preventDefault();
-			$("#btn_B").hide() ;
-			$("#btn_B_click").show() ;
-			//$("#btn").hide();
-		}).on('mouseup', function(e){
-			setTimeout(function(){			
-				$("#btn_B").show() ;
-				$("#btn_B_click").hide() ;
-				location.href="step3.html?type=呼朋引伴"
-			},1500);
-		});
+			$('#btn_C').on('touchstart', function(e){
+				e.preventDefault();
+				$("#btn_C").hide() ;
+				$("#btn_C_click").show() ;
+				//$("#btn").hide();
+			}).on('touchend', function(e){
+				e.preventDefault();
+				setTimeout(function(){			
+					$("#btn_C").show() ;
+					$("#btn_C_click").hide() ;
+					location.href="step3.html?type=親子樂活"
+				},1500);
 
-		$('#btn_C').on('touchstart', function(e){
-			e.preventDefault();
-			$("#btn_C").hide() ;
-			$("#btn_C_click").show() ;
-			//$("#btn").hide();
-		}).on('touchend', function(e){
-			e.preventDefault();
-			setTimeout(function(){			
-				$("#btn_C").show() ;
-				$("#btn_C_click").hide() ;
-				location.href="step3.html?type=親子樂活"
-			},1500);
+			});
 
-		});
+		}
+		else
+		{
+			$('#btn_A').click(function(){
+				$("#btn_A").hide() ;
+				$("#btn_A_click").show() ;
+				setTimeout(function(){			
+					location.href="step3.html?type=單身貴族"
+				},1500);
+			});
+			$('#btn_B').click(function(){
+				$("#btn_B").hide() ;
+				$("#btn_B_click").show() ;	
+				setTimeout(function(){							
+					location.href="step3.html?type=呼朋引伴"
+				},1500);
+			});
+			
+			$('#btn_C').click(function(){
+				$("#btn_C").hide() ;
+				$("#btn_C_click").show() ;
+				setTimeout(function(){								
+					location.href="step3.html?type=親子樂活"
+				},1500);
+			});
+		}
 
-		$('#btn_C').on('mousedown', function(e){
-			e.preventDefault();
-			$("#btn_C").hide() ;
-			$("#btn_C_click").show() ;
-			//$("#btn").hide();
-		}).on('mouseup', function(e){
-			e.preventDefault();
-			setTimeout(function(){			
-				$("#btn_C").show() ;
-				$("#btn_C_click").hide() ;
-				location.href="step3.html?type=親子樂活"
-			},1500);
-		});
+
+
 
 	});
 </script>

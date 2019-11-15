@@ -53,29 +53,38 @@
     	$("#money").text(number_format(money));
     	$("#type").text(decodeURI(type));
 
-		$('#btn').on('touchstart', function(e){
+    	$.extend($.support, { touch: "ontouchend" in document });
+		if($.support.touch){
+			$('#btn').on('touchstart', function(e){
+				e.preventDefault();
+				$("#btn").hide() ;
+				$("#btn_click").show() ;
+				//$("#btn").hide();
+			}).on('touchend', function(e){
+				e.preventDefault();
+				$("#btn").show() ;
+				$("#btn_click").hide() ;
+				location.href="step9.html?money="+money+"&type="+type ;
+			});
+		}
+		else
+		{
+			$('#btn').on('mousedown', function(e){
 			e.preventDefault();
 			$("#btn").hide() ;
 			$("#btn_click").show() ;
 			//$("#btn").hide();
-		}).on('touchend', function(e){
+		})
+			$("#btn_click").on('mouseup', function(e){
 			e.preventDefault();
 			$("#btn").show() ;
 			$("#btn_click").hide() ;
 			location.href="step9.html?money="+money+"&type="+type ;
-		});
+			});
+		}
 
-		$('#btn').on('mousedown', function(e){
-			e.preventDefault();
-			$("#btn").hide() ;
-			$("#btn_click").show() ;
-			//$("#btn").hide();
-		}).on('mouseup', function(e){
-			e.preventDefault();
-			$("#btn").show() ;
-			$("#btn_click").hide() ;
-			location.href="step9.html?money="+money+"&type="+type ;
-		});
+
+
 
 	});
 	function number_format(n) {
