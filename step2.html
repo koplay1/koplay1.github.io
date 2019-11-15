@@ -14,31 +14,31 @@
 		<div class="content">
 			<div class="title p-100">出門玩怎麼可以忘記旅遊保險呢～</div>
 			<div class="title p-50">來幫自己選擇想要的保障吧！</div>
-			<div class="p-100" style="text-align: center;">
-				<div id="btn_A"  style="width: 500px; display:inline-block; position: absolute; left: 780px;">
-					<img src="img/btn_A.png" style="width: 500px;">
+			<div class="p-50" style="text-align: center;">
+				<div id="btn_A"  style="width: 300px; display:inline-block; position: absolute; left: 390px;">
+					<img src="img/btn_A.png" style="width: 300px;">
 				</div>
-				<div id="btn_A_click" style="width: 500px; display:inline-block; position: absolute; left: 780px;display: none">
-					<img src="img/btn_A_click.png" style="width: 500px;">
+				<div id="btn_A_click" style="width: 300px; display:inline-block; position: absolute; left: 390px;display: none">
+					<img src="img/btn_A_click.png" style="width: 300px;">
 				</div>
-				<div class="btnDowntxt" style="top:920px; left: 800px;">單獨在外最容易遇到扒手了...<br>皮包皮夾要記得保護好~</div>
-				<div id="btn_B" style="width: 500px; display:inline-block; position: absolute; left: 1600px;">
-					<img src="img/btn_B.png" style="width: 500px;">
+				<div class="btnDowntxt" style="top:530px; left: 420px;">單獨在外最容易遇到扒手了...<br>皮包皮夾要記得保護好~</div>
+				<div id="btn_B" style="width: 300px; display:inline-block; position: absolute; left: 810px;">
+					<img src="img/btn_B.png" style="width: 300px;">
 				</div>
-				<div id="btn_B_click" style="width: 500px; display:inline-block; position: absolute; left: 1600px; display: none">
-					<img src="img/btn_B_click.png" style="width: 500px;">
+				<div id="btn_B_click" style="width: 300px; display:inline-block; position: absolute; left: 810px; display: none">
+					<img src="img/btn_B_click.png" style="width: 300px;">
 				</div>
-				<div class="btnDowntxt" style="top:920px; left: 1580px;">一起租車到處玩最開心了~<br>但開車還是要小心謹慎才行唷…</div>
-				<div id="btn_C"  style="width: 500px; display:inline-block; position: absolute; left: 2400px;">
-					<img src="img/btn_C.png" style="width: 500px;">
+				<div class="btnDowntxt" style="top:530px; left: 830px;">一起租車到處玩最開心了~<br>但開車還是要小心謹慎才行唷…</div>
+				<div id="btn_C"  style="width: 300px; display:inline-block; position: absolute; left: 1250px;">
+					<img src="img/btn_C.png" style="width: 300px;">
 				</div>
-				<div id="btn_C_click" style="width: 500px; display:inline-block; position: absolute; left: 2400px;display: none">
-					<img src="img/btn_C_click.png" style="width: 500px;">
+				<div id="btn_C_click" style="width: 300px; display:inline-block; position: absolute; left: 1250px;display: none">
+					<img src="img/btn_C_click.png" style="width: 300px;">
 				</div>
-				<div class="btnDowntxt" style="top:920px; left: 2430px;">全家出遊~家裡沒大人<br>千萬要小心小偷來光顧…</div>
-				<div style="padding-top: 700px;">
-					<img src="img/step2img1.png" width="2500px" style="margin-left: -100px;">
-					<img src="img/step2img2.png" width="3200px" class="p-100">
+				<div class="btnDowntxt" style="top:530px; left: 1285px;">全家出遊~家裡沒大人<br>千萬要小心小偷來光顧…</div>
+				<div style="padding-top: 380px;">
+					<img src="img/step2img1.png" width="1400px" style="margin-left: -130px;">
+					<img src="img/step2img2.png" width="1800px" class="p-50">
 				</div>
 			</div>
 		</div>
@@ -47,6 +47,23 @@
 </html>
 <script>
 	$(function(){
+
+		$('#btn_A').click(function(){
+			setTimeout(function(){			
+				location.href="step3.html?type=單身貴族"
+			},1500);
+		});
+		$('#btn_B').click(function(){
+			setTimeout(function(){			
+				location.href="step3.html?type=呼朋引伴"
+			},1500);
+		});
+		
+		$('#btn_C').click(function(){
+			setTimeout(function(){			
+				location.href="step3.html?type=親子樂活"
+			},1500);
+		});
 
 		$('#btn_A').on('touchstart', function(e){
 			e.preventDefault();
@@ -75,7 +92,8 @@
 				$("#btn_A_click").hide() ;
 				location.href="step3.html?type=單身貴族"
 			},1500);
-		});
+		});	
+
 
 		$('#btn_B').on('touchstart', function(e){
 			e.preventDefault();
