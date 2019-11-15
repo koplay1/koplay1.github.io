@@ -268,6 +268,9 @@ body{
 }
 .ptd{
 	padding: 100px 20px 20px 100px !important;
+	min-width: 1850px;
+	width: 1850px;
+	max-width: 1850px;
 }
 .redtext{
 	color:#d20f78; 
