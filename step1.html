@@ -15,7 +15,7 @@
 			<div class="welcome">歡迎來到國泰產險！</div>
 			<div class="title p-50">請輸入手機號碼，如果獲得電子禮券將透過其發送</div>
 			<div class="p-50"><img id="tel" class="mimg" src="img/tel.png"><input type="text" id="phone" name="phone" value="09" style="height: 110px; width: 600px; font-size: 75pt ; padding: 0 ;margin:0; border: 0; outline: none;">
-				<!-- 無遮罩號碼--><input type="text" name="rphone" id="rphone" value="09"  style="font-size: 100pt; display:none ;" >
+				<!-- 無遮罩號碼--><input type="text" name="rphone" id="rphone" value="09"  style="font-size: 50pt; display:none ;" >
 			</div>
 			<div class="p-50">
 				<div id="number" style="margin: 0 auto;">
@@ -31,6 +31,7 @@
 					<img class="mimg" src="img/star.png" data-num="*">
 					<img class="mimg" src="img/0.png" data-num="0">
 					<img class="mimg" src="img/sharp.png" data-num="#">
+					<img id="check" style="width: 340px; padding-top: 30px; margin-left: -10px;" src="img/s1check.png">
 				</div>
 			</div>
 		</div>
@@ -42,19 +43,29 @@
 		$("#tel").click(function(){
 			location.href="step2.html";
 		});
-		$("#number img").click(function(){
+		$("#check").click(function(){
+			location.href="step2.html";
+		});
+
+		$("#number .mimg").click(function(){
 			//alert($("#phone").val()+$(this).data("num"))
 			$("#phone").val($("#phone").val()+$(this).data("num"));
 			$("#rphone").val($("#rphone").val()+$(this).data("num"));
 
+			if($("#phone").val().length==8)
+				{  
+					setTimeout(function(){$("#phone").val($("#rphone").val().substr(0,7)+"*");},500);
+				} 
+
 			if($("#phone").val().length==9)
 				{  
 					$("#phone").val($("#rphone").val().substr(0,7)+"*"+$(this).data("num"));
+					setTimeout(function(){ $("#phone").val($("#phone").val().substr(0,8)+"*") } ,500) 
 				} 
 			if($("#phone").val().length==10)
 				{  
 					$("#phone").val($("#rphone").val().substr(0,7)+"**"+$(this).data("num"));
-					setTimeout(function(){ $("#phone").val($("#phone").val().substr(0,9)+"*") } ,1000)  
+					setTimeout(function(){ $("#phone").val($("#phone").val().substr(0,9)+"*") } ,500)  
 				} 
 
 		});

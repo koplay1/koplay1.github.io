@@ -12,7 +12,7 @@
 <body>
 	<div class="main" style="z-index: 999">
 		<div class="content" style="background-image: url('img/step3bg.png'); background-size: 100% 100%; background-repeat: no-repeat;">
-			<div class="title p-400" style="font-size: 42pt">請按鈕抽籤決定本趟旅程的旅遊金額</div>
+			<div class="title p-400" style="font-size: 42pt">請按鈕決定本次出遊攜帶的旅遊基金</div>
 			<div class="p-100" style="text-align: center;">
 				<div>
 					<input type="text" name="money" id="money" style="background: url(img/s3input-bg.png) no-repeat; background-size: 100% 100% ;width: 900px;height: 250px; font-size: 130pt; padding-left: 235px ; outline: none;vertical-align: top;text-align:right; color: #f9c147 ; border: 0;">
@@ -80,7 +80,7 @@
 		    if(i>=_m){
 		    	//$("#finish").show().fadeOut(600);
 		        clearInterval(s);
-		        setTimeout(function(){ location.href="step4.html?money="+_m+"&type="+type } ,3000);
+		        setTimeout(function(){ location.href="step4.html?money="+_m+"&type="+type } ,900);
 		    }
 		    $("#money").val(number_format(i));
 		},1);
