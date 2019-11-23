@@ -175,7 +175,9 @@ input[type="checkbox"]:focus + label::before {
     outline: rgb(59, 153, 252) auto 5px;
 }
 input[type="button"]{
-	-webkit-appearance:none;
+	-webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+    -moz-appearance: none;     /* FireFox */
+    appearance: none;
 }
 .s2div{
 	margin-top: 20px;
