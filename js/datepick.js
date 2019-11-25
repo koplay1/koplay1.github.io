@@ -11,7 +11,8 @@ var my_year = my_date.getFullYear();
 var my_month = my_date.getMonth();
 var my_day = my_date.getDate();
 function dayStart(month, year) {
-	var tmpDate = new Date(year, month, 2);
+	var tmpDate = new Date(year, month);
+	//alert(tmpDate)
 	return (tmpDate.getDay());
 }
 function daysMonth(month, year) {
@@ -26,8 +27,9 @@ function refreshDate(){
 	var str = "";
 	var totalDay = daysMonth(my_month, my_year); //获取该月总天数
 	var firstDay = dayStart(my_month, my_year); //获取该月第一天是星期几
+	//alert(firstDay)
 	var myclass;
-	for(var i=1; i<firstDay; i++){ 
+	for(var i=0; i<firstDay; i++){ 
 		str += "<li></li>"; //为起始日之前的日期创建空白节点
 	}
 	for(var i=1; i<=totalDay; i++){
