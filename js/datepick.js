@@ -41,7 +41,8 @@ function refreshDate(){
 			myclass = " class=''"; //当该日期在今天之后时，以深灰字体显示
 		}
 
-		var colorday = my_year+"-"+(my_month+1)+"-"+i;
+		var str_day = i.toString();
+		var colorday = my_year+"-"+(my_month+1)+"-"+paddingLeft(str_day,2);
 		alert(colorday+"="+ new Date(colorday).getDay())
 		if(new Date(colorday).getDay() == 6 || new Date(colorday).getDay()==0){
 			myclass = " class='redcolor'";
@@ -76,4 +77,10 @@ function pickup(_this){
 	$("#txt_date").val(my_year+"-"+(my_month+1)+"-"+$(_this).text());
 	$("li").removeClass("selected");
 	$(_this).addClass("selected");
+}
+function paddingLeft(str,lenght){
+	if(str.length >= lenght)
+	return str;
+	else
+	return paddingLeft("0" +str,lenght);
 }
