@@ -41,10 +41,10 @@ function refreshDate(){
 			myclass = " class=''"; //当该日期在今天之后时，以深灰字体显示
 		}
 
-var colorday = my_year+"-"+(my_month+1)+"-"+i;
-if(new Date(colorday).getDay() == 6 || new Date(colorday).getDay()==0){
-	myclass = " class='redcolor'";
-}
+		var colorday = my_year+"-"+(my_month+1)+"-"+i;
+		if(new Date(colorday).getDay() == 6 || new Date(colorday).getDay()==0){
+			myclass = " class='redcolor'";
+		}
 		str += "<li"+myclass+" onclick='pickup(this)'><div>"+i+"</div></li>"; //创建日期节点
 	}
 	holder.innerHTML = str; //设置日期显示
