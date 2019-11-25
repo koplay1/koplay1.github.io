@@ -54,7 +54,7 @@ body{
 	width: 100%;
 	color: #fff;
 }
-img{
+.btn_color img{
 	width: 100%;
 	margin-top: -2.4px;
 }
@@ -234,4 +234,11 @@ input[type="button"]{
 	padding-bottom: 10px;
 	word-break: break-all;
 	height: 50px;
+}
+#colorP div{
+	margin-top: 20px;
+	padding-top: 5px;
+}
+#colorP{
+	padding-bottom: 10px;
 }
