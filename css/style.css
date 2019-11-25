@@ -242,3 +242,15 @@ input[type="button"]{
 #colorP{
 	padding-bottom: 10px;
 }
+.people{
+	display: inline-block; width: 23.5%; text-align: center;
+}
+.people img{
+	width: 95% ;
+}
+.btn_color{
+	display: inline-block;
+}
+.btn_color img{
+	width: 15px;vertical-align: text-top; padding: 5px;padding-top:8px;
+}
