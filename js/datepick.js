@@ -42,6 +42,7 @@ function refreshDate(){
 		}
 
 		var colorday = my_year+"-"+(my_month+1)+"-"+i;
+		alert(colorday+"="+ new Date(colorday).getDay())
 		if(new Date(colorday).getDay() == 6 || new Date(colorday).getDay()==0){
 			myclass = " class='redcolor'";
 		}
