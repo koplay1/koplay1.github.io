@@ -43,7 +43,7 @@ function refreshDate(){
 
 		var str_day = i.toString();
 		var colorday = my_year+"-"+(my_month+1)+"-"+paddingLeft(str_day,2);
-		alert(colorday+"="+ new Date(colorday).getDay())
+		//alert(colorday+"="+ new Date(colorday).getDay())
 		if(new Date(colorday).getDay() == 6 || new Date(colorday).getDay()==0){
 			myclass = " class='redcolor'";
 		}
