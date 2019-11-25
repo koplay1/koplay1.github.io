@@ -16,38 +16,23 @@
 <div class="logo"><img src="img/logo.png"></div>
 <div style="background-image: url(img/s1-1.png); background-size: 100% 500px; margin-top: -50px; padding-top: 70px ;padding-left: 20px; padding-right: 20px;  background-repeat: no-repeat;">
     預約日期
-    <!--預約日期--><input type="text" id="txt_date" style="display: none">
-    <div style="padding-top: 20px;">
-        <div class="calendar">
-          <div class="title">
-            <div id="calendar-title">Month</div>
-            <div id="calendar-year">Year</div>
-            <a href="" id="prev"></a>
-            <a href="" id="next"></a>
-          </div>
-          <div class="body">
-            <div class="lightgrey body-list">
-              <ul>
-                <li>SUN</li>
-                <li>MON</li>
-                <li>TUE</li>
-                <li>WED</li>
-                <li>THU</li>
-                <li>FRI</li>
-                <li>SAT</li>                
-              </ul>
-            </div>
-            <div class="darkgrey body-list">
-              <ul id="days">
-              </ul>
-            </div>
-          </div>
-        </div>
-    </div>
-    <p>預約時間</p>
     <div style="padding-top: 20px;">
         <div class="custom-select" style="width:100%;">
-          <select id="dd_time">
+          <select>
+            <option value="0">請選擇日期</option>
+            <option value="1">2019/11/20</option>
+            <option value="1">2019/11/21</option>
+            <option value="1">2019/11/22</option>
+            <option value="1">2019/11/23</option>
+            <option value="1">2019/11/24</option>
+          </select>
+        </div>
+    </div>
+    <br>
+    預約時間
+    <div style="padding-top: 20px;">
+        <div class="custom-select" style="width:100%;">
+          <select>
             <option value="0">請選擇時間</option>
             <option value="1">11:00</option>
             <option value="1">12:00</option>
@@ -137,8 +122,6 @@
 </div>
 </body>
 </html>
-<script type="text/javascript" src="js/select.js"></script>
-<script type="text/javascript" src="js/datepick.js"></script>
 <script>
     $(function(){
         $("#btn_long1").click(function(){
@@ -167,7 +150,7 @@
                 alert("請先同意個資法條款");
             }
             
-        });
-
+        })
     });
 </script>
+<script type="text/javascript" src="js/select.js"></script>
