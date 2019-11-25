@@ -47,279 +47,38 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body{
-	background-color: #000;
-}
+
 .container{
 	width: 100%;
-	color: #fff;
+	min-height: 100vh;
 }
 img{
 	width: 100%;
-	margin-top: -2.4px;
-}
-.logo{
-	width: 100%;
-	text-align: center;
-}
-.logo img{
-	width: 190px;
-	padding-top: 23px;
-}
-select{
-	color: #fff;
 }
 
-
-/*the container must be positioned relative:*/
-.custom-select {
-  position: relative;
-  font-family: Arial;
+*, *:before, *::after {
+  box-sizing: border-box;
 }
 
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
-}
-
-.select-selected {
-  background-color: #dd256c;
-}
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 20px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 13px;
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 15px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: #dd256c;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-input{
-	background-color: #dd256c;
-	border: 0;
-}
-input[type='text']{
-	width: 220px;
-	padding: 10px;
-	color: #fff;
-}
-td{
-	padding-top: 15px;
-}
-input[type="checkbox"] {
-  visibility: hidden;
-}
-label {
-  cursor: pointer;
-}
-input[type="checkbox"] + label:before {
-  border: 2px solid #eee;
-  content: "\00a0";
-  display: inline-block;
-  font: 16px/1em sans-serif;
-  height: 16px;
-  margin: 0 .25em 0 0;
-  padding: 0;
-  vertical-align: top;
-  width: 16px;
-  background-color: #dd256c;
-}
-input[type="checkbox"]:checked + label:before {
-  background: #dd256c;
-  color: #fff;
-  content: "\2713";
+body {
+  color: #222;
   text-align: center;
-}
-input[type="checkbox"]:checked + label:after {
-  font-weight: bold;
-}
-
-input[type="checkbox"]:focus + label::before {
-    outline: rgb(59, 153, 252) auto 5px;
-}
-input[type="button"]{
-	-webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
-    -moz-appearance: none;     /* FireFox */
-    appearance: none;
-}
-.s2div{
-	margin-top: 20px;
-	font-size: 10pt;
-	display: inline-block;
-	color: #dd256c;
-	text-align: center;
-	vertical-align:middle;
-	padding-top:10px;
-	padding-bottom: 10px;
-	border: 1px solid transparent;
-	border-top: 0px;
-	border-bottom : 0px;
-	border-left:0px;
-	border-image: linear-gradient( transparent , #dd256c) 1 1 ;
-	word-break: break-all;
-}
-.s2div-un{
-	margin-bottom: 20px;
-	font-size: 10pt;
-	display: inline-block;
-	color: #dd256c;
-	text-align: center;
-	vertical-align:middle;
-	padding-top:10px;
-	padding-bottom: 10px;
-	border: 1px solid transparent;
-	border-top: 0px;
-	border-bottom : 0px;
-	border-left:0px;
-	border-image: linear-gradient(#dd256c,transparent) 1 1 ;
-	word-break: break-all;
-	height: 50px;
-}
-.s2divlast{
-	margin-top: 20px;
-	font-size: 10pt;
-	display: inline-block;
-	color: #dd256c;
-	text-align: center;
-	vertical-align:middle;
-	padding-top:10px;
-	padding-bottom: 10px;
-	word-break: break-all;
-}
-.s2divlast-un{
-	margin-bottom: 20px;
-	font-size: 10pt;
-	display: inline-block;
-	color: #dd256c;
-	text-align: center;
-	vertical-align:middle;
-	padding-top:10px;
-	padding-bottom: 10px;
-	word-break: break-all;
-	height: 50px;
-}
-#colorP div{
-	margin-top: 20px;
-	padding-top: 5px;
-}
-#colorP{
-	padding-bottom: 10px;
-}
-.people{
-	display: inline-block; width: 23.5%; text-align: center;
-}
-.people img{
-	width: 95% ;
-}
-.btn_color{
-	display: inline-block;
-}
-.btn_color img{
-	width: 15px;vertical-align: text-top; padding: 5px;padding-top:8px;
-}
-.calendar{
-	width:100%;
-	height:360px;
-	box-shadow:0px 1px 1px rgba(0,0,0,0.1);
-}
-.body-list ul{
-	width:100%;
-	font-family:arial;
-	font-weight:bold;
-	font-size:14px;
-}
-.body-list ul li{
-	width:14.28%;
-	height:48px;
-	line-height:40px;
-	list-style-type:none;
-	display:block;
-	box-sizing:border-box;
-	float:left;
-	text-align:center;
-	font-size: 14pt;
-}
-.greenbox{
-	border:1px solid #6ac13c;
-	background:#e9f8df; /*浅绿色背景*/
-}
-#calendar-title{
-	font-size: 16pt;
-	width: 49%;
-	display: inline-block;
-	color: #dd256c;
-}
-#calendar-year{
-	font-size: 16pt;
-	width: 49%;
-	display: inline-block;
-	text-align: right;
-	color: #dd256c;
-}
-.redcolor{
-	color: #dd256c;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.selected{
-	background-color: #dd256c;
-	transform: rotate(45deg);
+section {
+  height: 100vh;
+  position: relative;
 }
-.selected div{
-	color: #fff;
-	margin-left: -5px;
-	transform: rotate(-45deg);
-	padding-top: 3px;
+section p {
+  color: #fff;
+  font-size: 5rem;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
-/*
-.selected:before
-{
-	position:  absolute;
-	z-index: 1;
-	content: "\00a0";
-	font: 16px/1em sans-serif;
-	height: 30px;
-	margin: 5px 0 0px 9px ;
-	padding: 0;
-	vertical-align: top;
-	width: 30px;
-	background-color: #dd256c;
-	transform: rotate(45deg);
-}
-*/
