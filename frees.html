@@ -10,6 +10,21 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <style>
+      .link{
+        position: relative;
+      }
+      #btn{
+        position: absolute;
+        top: 50%;
+        z-index: 999999;
+        left: 50%;
+        margin-left: -70px;
+        width: 140px;
+        height:100px;
+        cursor: pointer;
+      }
+    </style>
 </head>
 </head>
 <body>
@@ -17,7 +32,10 @@
 
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="img/frees/loan02.png"/></div>
+      <div class="swiper-slide link">
+        <img src="img/frees/loan02.png"/>
+        <a href="KOPlayend.html" id="btn"></a>
+      </div>
       <div class="swiper-slide"><img src="img/frees/loan03.png"/></div>
       <div class="swiper-slide"><img src="img/frees/loan04.png"/></div>
       <div class="swiper-slide"><img src="img/frees/loan05.png"/></div>
@@ -46,5 +64,9 @@
 </html>
 <script src="js/swiper.min.js"></script>
 <script>
+  
   var swiper = new Swiper('.swiper-container');
+  // $('#btn').click(function(){
+  //   swiper.slideToLoop(20, 1000, false);
+  // })
 </script>
